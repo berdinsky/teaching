@@ -4,7 +4,7 @@
 # the initial state is '0'
 # accepting states are stored in the set accepting_state
 
-def TM_move(trans_func,input_str): 
+def DFA_move(trans_func,input_str): 
     curr_state = '0'
     for curr_symbol in input_str: 
         curr_state = trans_func[(curr_state,curr_symbol)]    
@@ -23,7 +23,7 @@ accepting_state = {'2','3'}
 input_str =  ['b','a','b','a','a']
 
 # here we return the final state after the input is read 
-final_state = TM_move(trans_func,input_str)
+final_state = DFA_move(trans_func,input_str)
 
 if final_state in accepting_state: 
     print('The input is accepted.') 
